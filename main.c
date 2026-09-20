@@ -18,6 +18,11 @@ int is_common_password(const char *password) {
 
 // TODO: check if the password contains at least one uppercase letter
 int has_uppercase(const char *password) {
+    for (int i = 0; i <strlen(password); i++) {
+        if (isupper(password[i])) {
+            return 1;
+        }
+    }
     return 0;
 }
 
