@@ -48,6 +48,14 @@ int has_digit(const char *password) {
 
 // TODO: check if the password contains at least one special character (e.g. !@#$%^&*)
 int has_special(const char *password) {
+    const char *specials = "!@#$%^&*";
+
+    for (int i = 0; i < strlen(password); i++) {
+        if (strchr(specials, password[i])) {
+            return 1;
+        }
+    }
+
     return 0;
 }
 
