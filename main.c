@@ -28,6 +28,11 @@ int has_uppercase(const char *password) {
 
 // TODO: check if the password contains at least one lowercase letter
 int has_lowercase(const char *password) {
+    for (int i = 0; i <strlen(password); i++) {
+        if (islower(password[i])) {
+            return 1;
+        }
+    }
     return 0;
 }
 
